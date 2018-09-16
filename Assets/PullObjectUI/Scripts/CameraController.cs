@@ -60,7 +60,6 @@ public class CameraController : MonoBehaviour {
 
         {
             Vector3 tmp = Input.mousePosition;
-            Debug.Log(tmp);
 
             float x = (tmp - newAngle).x;
             float y = (tmp - newAngle).y;
