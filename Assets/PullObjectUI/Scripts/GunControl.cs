@@ -44,15 +44,25 @@ public class GunControl : MonoBehaviour {
             //Debug.Log(hit.transform.gameObject.name);
             hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.red;
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetMouseButton(0))
             {
-                //Debug.Log("DownArrow");
+                // 当たったものを移動させる
+                float newDistance = Vector3.Distance(hit.transform.position, transform.position);
+                hit.transform.position = transform.position + angle * newDistance;
 
+                // 近くに引き寄せる
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    
+
+                }
+                // 遠くに離す
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+
+                }
             }
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                
-            }
+            
         }
         else
         {
