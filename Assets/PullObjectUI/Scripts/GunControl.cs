@@ -53,13 +53,14 @@ public class GunControl : MonoBehaviour {
                 // 近くに引き寄せる
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    
+
+                    hit.transform.position = hit.transform.position + (-angle) * 0.005f;
 
                 }
                 // 遠くに離す
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-
+                    hit.transform.position = hit.transform.position + (angle) * 0.005f;
                 }
             }
             
